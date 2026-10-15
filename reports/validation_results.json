@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "task": "binary semantic segmentation",
+  "split_record_counts": {
+    "train": 895,
+    "val": 271,
+    "test": 142
+  },
+  "split_unique_image_hash_counts": {
+    "train": 694,
+    "val": 199,
+    "test": 100
+  },
+  "split_source_groups": {
+    "train": {
+      "Thumbnail images/Real images/With fungi": 379,
+      "Thumbnail images/Real images/Without fungi": 218,
+      "Thumbnail images/Synthetic images": 298
+    },
+    "val": {
+      "Thumbnail images/Real images/With fungi": 124,
+      "Thumbnail images/Real images/Without fungi": 61,
+      "Thumbnail images/Synthetic images": 86
+    },
+    "test": {
+      "Thumbnail images/Real images/With fungi": 66,
+      "Thumbnail images/Real images/Without fungi": 33,
+      "Thumbnail images/Synthetic images": 43
+    }
+  },
+  "split_fungus_pixel_counts": {
+    "train": 3585595,
+    "val": 1478974,
+    "test": 742294
+  },
+  "split_empty_annotation_counts": {
+    "train": 227,
+    "val": 62,
+    "test": 34
+  },
+  "exact_hash_overlap": {
+    "train/val": 0,
+    "train/test": 0,
+    "val/test": 0
+  },
+  "problems": []
+}

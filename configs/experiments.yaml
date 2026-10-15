@@ -1,0 +1,53 @@
+# Training experiment plan. Not executed until a semantic trainer/GPU is chosen.
+# Use the same fixed split and seed for all rows; alter one factor per experiment.
+seed: 42
+validation_metric: fungus_dice
+held_out_test_policy: evaluate_once_after_selecting_best_validation_run
+ignore_index: 255
+train_sampling_manifest: data/splits/train_unique.json
+experiments:
+  - name: baseline_bce_dice_unique
+    status: pending_training_machine
+    loss: bce_plus_soft_dice
+    bce_positive_weight: derive_from_unique_train_pixels_report
+    sampling: one_per_exact_image_hash
+    edge_input: false
+    edge_loss: false
+    paired_geometric_augmentation: false
+    color_augmentation: false
+  - name: tversky_unique
+    status: pending_training_machine
+    loss: tversky_or_focal_tversky
+    sampling: one_per_exact_image_hash
+    edge_input: false
+    edge_loss: false
+    paired_geometric_augmentation: false
+    color_augmentation: false
+    compare_against: baseline_bce_dice_unique
+  - name: bce_dice_paired_geometry
+    status: pending_training_machine
+    loss: bce_plus_soft_dice
+    sampling: one_per_exact_image_hash
+    edge_input: false
+    edge_loss: false
+    paired_geometric_augmentation: random_right_angle_rotation_or_flip
+    color_augmentation: false
+    compare_against: baseline_bce_dice_unique
+  - name: boundary_loss
+    status: pending_training_machine
+    loss: bce_plus_dice_plus_boundary_term
+    sampling: one_per_exact_image_hash
+    edge_input: false
+    edge_loss: true
+    paired_geometric_augmentation: false
+    color_augmentation: false
+    compare_against: baseline_bce_dice_unique
+  - name: sobel_input_channel
+    status: pending_training_machine
+    loss: bce_plus_soft_dice
+    sampling: one_per_exact_image_hash
+    edge_input: sobel_magnitude_as_additional_input_channel
+    edge_loss: false
+    paired_geometric_augmentation: false
+    color_augmentation: false
+    compare_against: baseline_bce_dice_unique

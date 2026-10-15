@@ -1,0 +1,3 @@
+# First install the CUDA-enabled PyTorch build recommended for the training
+# laptop from https://pytorch.org/get-started/locally/; then install this file.
+ultralytics

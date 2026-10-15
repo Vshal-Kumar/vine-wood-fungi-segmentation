@@ -1,0 +1,23 @@
+# The one authoritative location for source and generated dataset paths.
+archive: data/raw/An eye on the vine.zip
+extracted_root: data/extracted/An eye on the vine
+processed_root: data/processed/semantic_segmentation
+splits_file: data/splits/splits.json
+image_extensions: [.png, .jpg, .jpeg, .tif, .tiff, .bmp]
+seed: 42
+split_ratios:
+  train: 0.70
+  val: 0.20
+  test: 0.10
+classes:
+  0: background
+  1: fungus
+ignore_index: 255
+synthetic_mask_threshold: 128
+include_groups:
+  - Thumbnail images/Synthetic images
+  - Thumbnail images/Real images/With fungi
+  - Thumbnail images/Real images/Without fungi
+reference_only_groups:
+  - Original images/Microscope 1
+  - Original images/Microscope 2

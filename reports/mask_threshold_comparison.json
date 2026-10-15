@@ -1,0 +1,37 @@
+{
+  "synthetic_mask_count": 427,
+  "current_method": "fixed grayscale >= 128",
+  "per_mask_otsu_threshold_min_median_max": [
+    104,
+    114,
+    119
+  ],
+  "per_mask_otsu_threshold_distribution": {
+    "104": 1,
+    "107": 14,
+    "108": 7,
+    "109": 29,
+    "110": 4,
+    "111": 24,
+    "112": 37,
+    "113": 49,
+    "114": 69,
+    "115": 64,
+    "116": 65,
+    "117": 49,
+    "118": 13,
+    "119": 2
+  },
+  "pooled_otsu_threshold": 114,
+  "pixels_changed_by_pooled_otsu_vs_current": 62911,
+  "fraction_all_mask_pixels_changed_by_pooled_otsu": 0.002248116343585334,
+  "pixels_changed_by_per_mask_otsu_vs_current": 67448,
+  "fraction_all_mask_pixels_changed_by_per_mask_otsu": 0.002410245444233021,
+  "median_fraction_pixels_changed_per_mask": 0.00238037109375,
+  "fixed_foreground_pixels": 1795699,
+  "pooled_otsu_foreground_pixels": 1858610,
+  "per_mask_otsu_foreground_pixels": 1863147,
+  "threshold_otsu_convention": "classify intensity > threshold as fungus",
+  "training_masks_modified": false,
+  "comparison_visualization": "reports/visualizations/otsu_mask_threshold_comparison.png"
+}

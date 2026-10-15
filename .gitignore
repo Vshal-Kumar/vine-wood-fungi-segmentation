@@ -205,6 +205,23 @@ cython_debug/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
 
+# Dataset source and generated local artifacts; regenerate using documented scripts.
+/data/raw/
+/data/extracted/
+/data/processed/
+/data/splits/
+/experiments/
+/predictions/
+/reports/dataset_inventory.json
+/reports/dataset_quality_report.md
+/reports/annotation_analysis.md
+/reports/preprocessing_report.md
+/reports/validation_report.md
+/reports/experiment_preparation_report.md
+/reports/experiment_preparation.json
+/reports/visualizations/
+/reports/annotation_samples.png
+
 # Ruff stuff:
 .ruff_cache/
 

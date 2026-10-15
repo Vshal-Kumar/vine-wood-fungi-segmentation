@@ -1,0 +1,17 @@
+# Training is run on the separate laptop with Ultralytics' semantic task.
+task: semantic
+framework: ultralytics
+model: yolo26n-sem.pt
+dataset: data/processed/yolo_semantic_unique/dataset.yaml
+image_size: 256
+batch_size: 4
+epochs: 100
+early_stopping_patience: 15
+seed: 42
+mixed_precision: true
+training_status: not_started
+notes:
+  - This is YOLO26 semantic segmentation, not YOLO instance segmentation.
+  - Pretrained weights are automatically downloaded by Ultralytics on first model load.
+  - The training script refuses to start if the checkpoint task is not semantic or requested CUDA is unavailable.
+  - Review the Ultralytics AGPL-3.0/Enterprise license before use or redistribution.
